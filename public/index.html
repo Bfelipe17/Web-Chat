@@ -4,10 +4,21 @@
 	<meta charset="utf-8"/>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 	<title>Web Chat</title>
-<!-- 	<link href="css/seu-stylesheet.css" rel="stylesheet"/>
-	<script src="scripts/seu-script.js"></script> -->
 </head>
 <body>
+<h1>Welcome to Web Chat</h1>
 
+<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+<script>
+	let socket = io();
+
+	socket.on('connect', function() {
+		console.log('Connected to Server');
+	});
+
+	socket.on('disconnect', function() {
+		console.log('Disconnected from Server');
+	})
+</script>
 </body>
 </html>

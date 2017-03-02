@@ -6,9 +6,16 @@
 	<title>Web Chat</title>
 </head>
 <body>
-<h1>Welcome to Web Chat</h1>
+	<h1>Welcome to Web Chat</h1>
+	<ol id="messages">
 
-<script src="/socket.io/socket.io.js" charset="utf-8"></script>
-<script src="/js/index.js" charset="utf-8"></script>
+	</ol>
+	<form id="message-form" action="">
+		<input id="message" type="text" name="message" placeholder="Message here">
+		<button>Send</button>
+	</form>
+
+	<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+	<script src="/js/index.js" charset="utf-8"></script>
 </body>
 </html>

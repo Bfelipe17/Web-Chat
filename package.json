@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'yarn test'"
   },
   "repository": {},
   "author": "Bruno Felipe",
@@ -11,5 +13,9 @@
   "dependencies": {
     "express": "^4.14.1",
     "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0"
   }
 }
